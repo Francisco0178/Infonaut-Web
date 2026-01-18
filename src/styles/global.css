@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* ========================================
+   CONFIGURACIÓN DE TAILWIND v4
+   ======================================== */
+
+@theme {
+  /* Fuente base del sitio - Adinuee PRO */
+  --font-family-sans: "Adinuee PRO", ui-sans-serif, system-ui, sans-serif;
+
+  /* Fuentes personalizadas disponibles como clases utilitarias */
+  --font-family-adinuee: "Adinuee PRO", sans-serif;
+  --font-family-gotham: "Gotham", sans-serif;
+  --font-family-gotham-rounded: "Gotham Rounded", sans-serif;
+  --font-family-montserrat: "Montserrat", sans-serif;
+  --font-family-anton: "Anton", cursive;
+}
+
+/* ========================================
+   FUENTES PERSONALIZADAS
+   ======================================== */
+
+/* Anton - Regular */
+@font-face {
+  font-family: "Anton";
+  src: url("/fonts/Anton-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham - Book (Normal) */
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham - Medium */
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham - Bold */
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham Rounded - Book (Normal) */
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("/fonts/GothamRnd-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham Rounded - Bold */
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("/fonts/GothamRnd-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat - Regular */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat - Medium */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Adinuee PRO - Bold */
+@font-face {
+  font-family: "Adinuee PRO";
+  src: url("/fonts/adineue-PRO-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================================
+   ESTILOS GLOBALES
+   ======================================== */
+
+/* Fuente base del sitio - Adinuee PRO se aplica automáticamente vía --font-family-sans */
+body {
+  @apply font-sans;
+  background-color: #f0f0f0;
+}
+
+/* Tipografía de encabezados */
+h1,
+h2,
+h3 {
+  @apply font-anton;
+}
+
+h4,
+h5,
+h6 {
+  @apply font-gotham;
+  font-weight: 700;
+}
