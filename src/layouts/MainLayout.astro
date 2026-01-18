@@ -1,26 +1,72 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import NavBar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar.astro";
 import "../styles/global.css";
 interface Props {
 	title: string;
+	description?: string;
+	fullWidth?: boolean; // Opción para páginas que necesiten ancho completo
+	showNavbar?: boolean; // Opción para ocultar el navbar
+	image?: string;
+	canonicalURL?: string;
+	type?: "website" | "article";
 }
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description = "Diseño de páginas web profesionales en Chile. Sitios rápidos, modernos y optimizados para SEO. Cotiza tu proyecto con Infonaut.", 
+	fullWidth = false, 
+	showNavbar = true,
+	image = "/images/og-image.jpg", // Default image (needs to be created or mapped)
+	canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+	type = "website"
+} = Astro.props;
 
 ---
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Basics -->
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.site)} />
+		<meta property="og:site_name" content="Infonaut" />
+		<meta property="og:locale" content="es_CL" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, Astro.site)} />
+
     <ViewTransitions />
 	</head>
-	<body>
-		<NavBar />
-		<slot />
+	<body class="min-h-screen flex flex-col">
+		{showNavbar && <Navbar />}
+		
+		<!-- Contenedor principal con márgenes -->
+		<main class={fullWidth ? "flex-1" : "flex-1 site-container"}>
+			<slot />
+		</main>
+		
+		<!-- Footer (opcional, para futuro) -->
+		<!-- <footer class="site-container py-8 bg-gray-100">
+			<p class="text-center text-gray-600">© 2026 Infonaut - Todos los derechos reservados</p>
+		</footer> -->
 	</body>
 </html>

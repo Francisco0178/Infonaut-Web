@@ -6,14 +6,90 @@
 
 @theme {
   /* Fuente base del sitio - Adinuee PRO */
-  --font-family-sans: "Adinuee PRO", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Adinuee PRO", ui-sans-serif, system-ui, sans-serif;
 
-  /* Fuentes personalizadas disponibles como clases utilitarias */
-  --font-family-adinuee: "Adinuee PRO", sans-serif;
-  --font-family-gotham: "Gotham", sans-serif;
-  --font-family-gotham-rounded: "Gotham Rounded", sans-serif;
-  --font-family-montserrat: "Montserrat", sans-serif;
-  --font-family-anton: "Anton", cursive;
+  /* Colores de la marca Infonaut */
+  --color-primary: #00aab5;
+  --color-secondary: #00b547;
+  --color-accent-1: #00b585;
+  --color-accent-2: #0070b5;
+  --color-accent-3: #0037b5;
+}
+
+/* ========================================
+   CLASES UTILITARIAS PERSONALIZADAS
+   ======================================== */
+
+@layer utilities {
+  /* Fuentes personalizadas */
+  .font-adinuee {
+    font-family: "Adinuee PRO", sans-serif;
+  }
+
+  .font-gotham {
+    font-family: "Gotham", sans-serif;
+  }
+
+  .font-gotham-rounded {
+    font-family: "Gotham Rounded", sans-serif;
+  }
+
+  .font-montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .font-anton {
+    font-family: "Anton", cursive;
+  }
+
+  /* Contenedores con márgenes */
+  .site-container {
+    width: 100%;
+    max-width: 1280px; /* Ancho máximo del contenido */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem; /* 24px */
+  }
+
+  /* Contenedor más estrecho para contenido de lectura */
+  .content-container {
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Contenedor extra ancho */
+  .wide-container {
+    width: 100%;
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Responsive: aumentar padding en pantallas grandes */
+  @media (min-width: 768px) {
+    .site-container,
+    .content-container,
+    .wide-container {
+      padding-left: 2rem; /* 32px */
+      padding-right: 2rem; /* 32px */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .site-container,
+    .content-container,
+    .wide-container {
+      padding-left: 3rem; /* 48px */
+      padding-right: 3rem; /* 48px */
+    }
+  }
 }
 
 /* ========================================
@@ -105,9 +181,13 @@
    ESTILOS GLOBALES
    ======================================== */
 
-/* Fuente base del sitio - Adinuee PRO se aplica automáticamente vía --font-family-sans */
+/* Fuente base del sitio - Adinuee PRO */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply font-sans;
+  font-family: "Adinuee PRO", ui-sans-serif, system-ui, sans-serif;
   background-color: #f0f0f0;
 }
 
@@ -115,12 +195,12 @@ body {
 h1,
 h2,
 h3 {
-  @apply font-anton;
+  font-family: "Anton", cursive;
 }
 
 h4,
 h5,
 h6 {
-  @apply font-gotham;
+  font-family: "Gotham", sans-serif;
   font-weight: 700;
 }
