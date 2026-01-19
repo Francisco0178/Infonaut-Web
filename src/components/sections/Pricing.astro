@@ -1,0 +1,194 @@
+---
+import { Image } from "astro:assets";
+import pricingBanner from "../../assets/images/banner-1.jpg";
+---
+
+<section id="precios" class="relative py-32 flex items-center justify-center overflow-hidden">
+    <!-- Background & Overlay -->
+    <div class="absolute inset-0 z-0">
+        <Image 
+            src={pricingBanner} 
+            class="w-full h-full object-cover" 
+            alt="Pricing Banner" 
+        />
+        <div class="absolute inset-0 bg-primary opacity-80"></div>
+    </div>
+
+
+    <div class="site-container relative z-10 text-center text-white pb-20">
+        <h2 class="text-4xl md:text-5xl font-gotham mb-6 reveal from-bottom">
+            Planes y Precios Transparentes
+        </h2>
+        <p class="text-xl font-gotham-rounded opacity-90 max-w-3xl mx-auto reveal from-bottom delay-200">
+            Sin costos ocultos ni mensualidades. Pagas una vez, es tuyo para siempre.
+        </p>
+    </div>
+</section>
+
+<!-- Pricing Cards (Overlapping) -->
+<section class="pb-24 bg-gray-50">
+    <div class="site-container relative z-10 -mt-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+            <!-- Plan Start -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-2 reveal zoom-in delay-100">
+                <div class="p-8 border-b border-gray-100 grow">
+                    <h3 class="text-xl font-gotham text-gray-900 mb-2">Plan Start</h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-4xl font-bold text-primary">$200.000</span>
+                        <span class="text-gray-500 text-sm font-bold">+ IVA</span>
+                    </div>
+                    <p class="text-sm font-bold text-gray-500 mb-6 uppercase tracking-wider">Pago Único</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Web hasta <span class="font-bold">4 secciones</span></span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Entrega en <span class="font-bold">5 días hábiles</span></span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Optimizado para convertir
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            100% Autoadministrable
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Hosting y Dominio x 1 año
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#contacto" class="block w-full py-3 px-6 text-center rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">
+                        Cotizar Start
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan Pro -->
+            <div class="bg-white rounded-2xl shadow-lg border-2 border-primary overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col transform scale-105 md:scale-100 lg:scale-105 z-10 reveal zoom-in delay-200">
+                <div class="bg-primary text-white text-center py-2 text-xs font-bold tracking-widest uppercase">Más Popular</div>
+                <div class="p-8 border-b border-gray-100 grow">
+                    <h3 class="text-xl font-gotham text-gray-900 mb-2">Plan Pro</h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-4xl font-bold text-primary">$250.000</span>
+                        <span class="text-gray-500 text-sm font-bold">+ IVA</span>
+                    </div>
+                    <p class="text-sm font-bold text-gray-500 mb-6 uppercase tracking-wider">Pago Único</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Web hasta <span class="font-bold">7 secciones</span></span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Entrega en <span class="font-bold">7 días hábiles</span></span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Optimizado para convertir
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            100% Autoadministrable
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Hosting y Dominio x 1 año
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#contacto" class="block w-full py-3 px-6 text-center rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/50">
+                        Cotizar Pro
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan Plus -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-2 reveal zoom-in delay-300">
+                <div class="p-8 border-b border-gray-100 grow">
+                    <h3 class="text-xl font-gotham text-gray-900 mb-2">Plan Plus</h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-4xl font-bold text-primary">$350.000</span>
+                        <span class="text-gray-500 text-sm font-bold">+ IVA</span>
+                    </div>
+                    <p class="text-sm font-bold text-gray-500 mb-6 uppercase tracking-wider">Pago Único</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Web hasta <span class="font-bold">10 secciones</span></span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Entrega en <span class="font-bold">10 días hábiles</span></span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Optimizado para convertir
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            100% Autoadministrable
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Hosting y Dominio x 1 año
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#contacto" class="block w-full py-3 px-6 text-center rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">
+                        Cotizar Plus
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan Store -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-2 reveal zoom-in delay-400">
+                <div class="p-8 border-b border-gray-100 grow">
+                    <h3 class="text-xl font-gotham text-gray-900 mb-2">Plan Store</h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-4xl font-bold text-secondary">$385.000</span>
+                        <span class="text-gray-500 text-sm font-bold">+ IVA</span>
+                    </div>
+                    <p class="text-sm font-bold text-gray-500 mb-6 uppercase tracking-wider">Pago Único</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><span class="font-bold">Tienda Online</span> Completa</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Entrega en <span class="font-bold">10 días hábiles</span></span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Pagos vía <span class="font-bold">WebPay Plus</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            100% Autoadministrable
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Hosting y Dominio x 1 año
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50">
+                    <a href="#contacto" class="block w-full py-3 px-6 text-center rounded-lg border-2 border-secondary text-secondary font-bold hover:bg-secondary hover:text-white transition-all">
+                        Cotizar Store
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

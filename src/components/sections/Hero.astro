@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import bgImage from "../../assets/images/bg-1.jpg";
+---
+
+<section id="inicio" class="relative h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <Image 
+            src={bgImage} 
+            alt="Background" 
+            class="w-full h-full object-cover opacity-80"
+            loading="eager"
+        />
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        
+        <div class="absolute top-0 left-0 right-0 h-32 bg-linear-to-b from-primary/20 to-transparent blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-64 bg-linear-to-t from-accent-3/40 to-transparent blur-3xl"></div>
+    </div>
+
+    <div class="site-container relative z-10 w-full">
+        <div class="text-left text-white max-w-4xl">
+            <p class="tracking-widest text-2xl mb-4 uppercase reveal from-left delay-100">
+                DESDE <span class="text-yellow-400 font-bold">$200.000</span> (OFERTA) | PAGO ÚNICO
+            </p>
+            
+            <h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 font-gotham leading-tight reveal from-left">
+                Diseño de Páginas Web <br/>
+                <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
+                    Profesionales en Chile
+                </span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-10 opacity-90 max-w-2xl font-light leading-relaxed font-gotham-rounded reveal from-bottom delay-200">
+                Transformamos ideas en experiencias digitales de alto impacto. 
+                Sitios rápidos, modernos y optimizados para vender más.
+            </p>
+            
+            <div class="flex gap-4 flex-wrap reveal from-bottom delay-400">
+                <a 
+                    href="#precios" 
+                    class="flex items-center gap-3 px-8 py-4 rounded-full font-gotham font-bold transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,170,181,0.4)] hover:shadow-[0_0_30px_rgba(0,170,181,0.6)] bg-linear-to-r from-primary to-secondary text-white"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Cotizar mi Sitio Web
+                </a>
+                
+                <a 
+                    href="#contacto" 
+                    class="flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-gotham font-bold hover:bg-white hover:text-gray-900 transition-all"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    Hablar con un Experto
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

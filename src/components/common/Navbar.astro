@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../assets/images/logo-oficial-2.svg"
+import logo from "../../assets/images/logo-oficial-2.svg"
 ---
 
 <nav class="absolute top-0 left-0 right-0 z-50 bg-transparent">
@@ -17,27 +17,31 @@ import logo from "../assets/images/logo-oficial-2.svg"
 				<div class="flex gap-8">
 					<a 
 						href="#inicio" 
-						class="font-gotham text-white hover:text-primary transition-colors text-sm font-medium tracking-wide"
+						class="font-gotham text-white text-sm font-medium tracking-wide relative group"
 					>
 						INICIO
+						<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
 					</a>
 					<a 
 						href="#beneficios" 
-						class="font-gotham text-white hover:text-primary transition-colors text-sm font-medium tracking-wide"
+						class="font-gotham text-white text-sm font-medium tracking-wide relative group"
 					>
 						BENEFICIOS
+						<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
 					</a>
 					<a 
 						href="#precios" 
-						class="font-gotham text-white hover:text-primary transition-colors text-sm font-medium tracking-wide"
+						class="font-gotham text-white text-sm font-medium tracking-wide relative group"
 					>
 						PRECIOS
+						<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
 					</a>
 					<a 
 						href="#contacto" 
-						class="font-gotham text-white hover:text-primary transition-colors text-sm font-medium tracking-wide"
+						class="font-gotham text-white text-sm font-medium tracking-wide relative group"
 					>
 						CONTACTO
+						<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
 					</a>
 				</div>
 

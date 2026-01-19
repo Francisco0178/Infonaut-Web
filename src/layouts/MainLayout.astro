@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/common/Navbar.astro";
+import TopBanner from "../components/common/TopBanner.astro";
 import "../styles/global.css";
 interface Props {
 	title: string;
@@ -57,16 +58,43 @@ const {
     <ViewTransitions />
 	</head>
 	<body class="min-h-screen flex flex-col">
-		{showNavbar && <Navbar />}
+		<TopBanner />
 		
-		<!-- Contenedor principal con márgenes -->
-		<main class={fullWidth ? "flex-1" : "flex-1 site-container"}>
-			<slot />
-		</main>
+		<div class="relative flex-1 flex flex-col">
+			{showNavbar && <Navbar />}
+			
+			<!-- Contenedor principal con márgenes -->
+			<main class={fullWidth ? "flex-1" : "flex-1 site-container"}>
+				<slot />
+			</main>
+		</div>
 		
 		<!-- Footer (opcional, para futuro) -->
 		<!-- <footer class="site-container py-8 bg-gray-100">
 			<p class="text-center text-gray-600">© 2026 Infonaut - Todos los derechos reservados</p>
 		</footer> -->
+	<script>
+		// Animation Script
+		document.addEventListener('astro:page-load', () => {
+			const revealElements = document.querySelectorAll('.reveal');
+
+			const revealOnScroll = () => {
+				const windowHeight = window.innerHeight;
+				const elementVisible = 100;
+
+				revealElements.forEach((reveal) => {
+					const elementTop = reveal.getBoundingClientRect().top;
+
+					if (elementTop < windowHeight - elementVisible) {
+						reveal.classList.add('active');
+					}
+				});
+			};
+
+			window.addEventListener('scroll', revealOnScroll);
+			// Trigger once on load
+			revealOnScroll();
+		});
+	</script>
 	</body>
 </html>

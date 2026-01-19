@@ -204,3 +204,59 @@ h6 {
   font-family: "Gotham", sans-serif;
   font-weight: 700;
 }
+
+/* ========================================
+   ANIMACIONES DE SCROLL
+   ======================================== */
+
+.reveal {
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+  transform: translateY(30px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.from-left {
+  transform: translateX(-50px);
+}
+
+.reveal.from-left.active {
+  transform: translateX(0);
+}
+
+.reveal.from-bottom {
+  transform: translateY(50px);
+}
+
+.reveal.from-bottom.active {
+  transform: translateY(0);
+}
+
+.reveal.zoom-in {
+  transform: scale(0.95);
+}
+
+.reveal.zoom-in.active {
+  transform: scale(1);
+}
+
+/* Retrasos escalonados */
+.delay-100 {
+  transition-delay: 0.1s;
+}
+.delay-200 {
+  transition-delay: 0.2s;
+}
+.delay-300 {
+  transition-delay: 0.3s;
+}
+.delay-400 {
+  transition-delay: 0.4s;
+}
+.delay-500 {
+  transition-delay: 0.5s;
+}
